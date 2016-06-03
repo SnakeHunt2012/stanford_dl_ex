@@ -23,5 +23,5 @@ function [f,g] = linear_regression(theta, X,y)
   
 %%% YOUR CODE HERE %%%
 
-  f = (theta' * X - y) * (theta' * X - y)';
+  f = ((theta' * X - y) * (theta' * X - y)') ./ 2;
   g = X * (theta' * X - y)';
